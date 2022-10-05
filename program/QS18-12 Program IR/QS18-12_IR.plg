@@ -1,0 +1,267 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+C:\Documents and Settings\brian\Desktop\PCB personal design\All nixie tube file\QS18-12 Program IR\QS18-12.uvproj
+Project File Date:  06/16/2014
+
+<h2>Output:</h2>
+Rebuild target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=30.0 xdata=0 code=936
+creating hex file from "QS18-12_IR"...
+"QS18-12_IR" - 0 Error(s), 0 Warning(s).
+Rebuild target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=30.0 xdata=0 code=936
+creating hex file from "QS18-12_IR"...
+"QS18-12_IR" - 0 Error(s), 0 Warning(s).
+Rebuild target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=30.0 xdata=0 code=936
+creating hex file from "nixie_clock"...
+"nixie_clock" - 0 Error(s), 0 Warning(s).
+Rebuild target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=40.0 xdata=0 code=953
+creating hex file from "nixie_clock"...
+"nixie_clock" - 0 Error(s), 0 Warning(s).
+Rebuild target 'Target 1'
+compiling main.c...
+main.c(90): error C202: 'test_words': undefined identifier
+main.c(116): error C202: 'bool': undefined identifier
+main.c(116): error C141: syntax error near 'complete'
+main.c(117): error C141: syntax error near 'uint8_t'
+main.c(117): error C202: 'setup_pos': undefined identifier
+main.c(118): error C141: syntax error near 'uint8_t'
+main.c(118): error C202: 'time_temp': undefined identifier
+main.c(118): error C141: syntax error near '{'
+main.c(118): error C141: syntax error near '}'
+main.c(119): error C141: syntax error near 'uint8_t'
+main.c(119): error C141: syntax error near '{'
+main.c(119): error C141: syntax error near '}'
+main.c(120): error C141: syntax error near 'uint8_t'
+main.c(121): error C141: syntax error near 'uint8_t'
+main.c(121): error C202: 'ptr': undefined identifier
+main.c(125): error C202: 'i': undefined identifier
+main.c(127): error C202: 'complete': undefined identifier
+main.c(134): error C202: 'posistion': undefined identifier
+main.c(135): error C202: 'setup_pos': undefined identifier
+main.c(136): error C202: 'setup_pos': undefined identifier
+main.c(136): error C202: 'ptr': undefined identifier
+main.c(137): error C202: 'setup_pos': undefined identifier
+main.c(137): error C202: 'complete': undefined identifier
+main.c(140): error C202: 'i': undefined identifier
+main.c(141): error C202: 'i': undefined identifier
+main.c(142): error C202: 'setup_pos': undefined identifier
+main.c(143): error C202: 'i': undefined identifier
+main.c(143): error C202: 'ptr': undefined identifier
+main.c(147): error C202: 'setup_pos': undefined identifier
+main.c(148): error C202: 'i': undefined identifier
+main.c(148): error C202: 'ptr': undefined identifier
+main.c(159): error C202: 'setup_pos': undefined identifier
+main.c(159): error C202: 'ptr_temp': undefined identifier
+main.c(160): error C202: 'setup_pos': undefined identifier
+main.c(160): error C202: 'ptr_temp': undefined identifier
+main.c(162): error C202: 'i': undefined identifier
+main.c(163): error C202: 'ptr_temp': undefined identifier
+main.c(164): error C202: 'ptr_temp': undefined identifier
+main.c(165): error C202: 'ptr_temp': undefined identifier
+main.c(166): error C202: 'ptr_temp': undefined identifier
+main.c(167): error C202: 'ptr_temp': undefined identifier
+main.c(168): error C202: 'ptr_temp': undefined identifier
+main.c(169): error C202: 'ptr_temp': undefined identifier
+main.c(170): error C202: 'ptr_temp': undefined identifier
+main.c(171): error C202: 'ptr_temp': undefined identifier
+main.c(172): error C202: 'ptr_temp': undefined identifier
+main.c(173): error C202: 'ptr_temp': undefined identifier
+Target not created
+Rebuild target 'Target 1'
+compiling main.c...
+main.c(90): error C202: 'test_words': undefined identifier
+main.c(116): error C202: 'bool': undefined identifier
+main.c(116): error C141: syntax error near 'complete'
+main.c(117): error C141: syntax error near 'uint8_t'
+main.c(117): error C202: 'setup_pos': undefined identifier
+main.c(118): error C141: syntax error near 'uint8_t'
+main.c(118): error C202: 'time_temp': undefined identifier
+main.c(118): error C141: syntax error near '{'
+main.c(118): error C141: syntax error near '}'
+main.c(119): error C141: syntax error near 'uint8_t'
+main.c(119): error C141: syntax error near '{'
+main.c(119): error C141: syntax error near '}'
+main.c(120): error C141: syntax error near 'uint8_t'
+main.c(121): error C141: syntax error near 'uint8_t'
+main.c(121): error C202: 'ptr_temp': undefined identifier
+main.c(122): error C141: syntax error near 'uint8_t'
+main.c(122): error C202: 'ptr': undefined identifier
+main.c(126): error C202: 'i': undefined identifier
+main.c(128): error C202: 'complete': undefined identifier
+main.c(135): error C202: 'posistion': undefined identifier
+main.c(136): error C202: 'setup_pos': undefined identifier
+main.c(137): error C202: 'setup_pos': undefined identifier
+main.c(137): error C202: 'ptr': undefined identifier
+main.c(138): error C202: 'setup_pos': undefined identifier
+main.c(138): error C202: 'complete': undefined identifier
+main.c(141): error C202: 'i': undefined identifier
+main.c(142): error C202: 'i': undefined identifier
+main.c(143): error C202: 'setup_pos': undefined identifier
+main.c(144): error C202: 'i': undefined identifier
+main.c(144): error C202: 'ptr': undefined identifier
+main.c(148): error C202: 'setup_pos': undefined identifier
+main.c(149): error C202: 'i': undefined identifier
+main.c(149): error C202: 'ptr': undefined identifier
+main.c(160): error C202: 'setup_pos': undefined identifier
+main.c(160): error C202: 'ptr_temp': undefined identifier
+main.c(161): error C202: 'setup_pos': undefined identifier
+main.c(161): error C202: 'ptr_temp': undefined identifier
+main.c(163): error C202: 'i': undefined identifier
+main.c(164): error C202: 'ptr_temp': undefined identifier
+main.c(165): error C202: 'ptr_temp': undefined identifier
+main.c(166): error C202: 'ptr_temp': undefined identifier
+main.c(167): error C202: 'ptr_temp': undefined identifier
+main.c(168): error C202: 'ptr_temp': undefined identifier
+main.c(169): error C202: 'ptr_temp': undefined identifier
+main.c(170): error C202: 'ptr_temp': undefined identifier
+main.c(171): error C202: 'ptr_temp': undefined identifier
+main.c(172): error C202: 'ptr_temp': undefined identifier
+main.c(173): error C202: 'ptr_temp': undefined identifier
+main.c(174): error C202: 'ptr_temp': undefined identifier
+Target not created
+Rebuild target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=44.0 xdata=0 code=1692
+creating hex file from "nixie_clock"...
+"nixie_clock" - 0 Error(s), 0 Warning(s).
+Rebuild target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=45.0 xdata=0 code=1775
+creating hex file from "nixie_clock"...
+"nixie_clock" - 0 Error(s), 0 Warning(s).
+Rebuild target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=45.0 xdata=0 code=1775
+creating hex file from "nixie_clock"...
+"nixie_clock" - 0 Error(s), 0 Warning(s).
+Rebuild target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=45.0 xdata=0 code=1775
+creating hex file from "nixie_clock"...
+"nixie_clock" - 0 Error(s), 0 Warning(s).
+Rebuild target 'Target 1'
+compiling main.c...
+main.c(165): error C141: syntax error near ';'
+main.c(165): error C141: syntax error near ')'
+main.c(177): error C141: syntax error near 'else'
+main.c(177): error C141: syntax error near ';'
+main.c(177): error C141: syntax error near ')'
+Target not created
+Rebuild target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=45.0 xdata=0 code=1800
+creating hex file from "nixie_clock"...
+"nixie_clock" - 0 Error(s), 0 Warning(s).
+Rebuild target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=45.0 xdata=0 code=1797
+creating hex file from "nixie_clock"...
+"nixie_clock" - 0 Error(s), 0 Warning(s).
+Rebuild target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=45.0 xdata=0 code=1803
+creating hex file from "nixie_clock"...
+"nixie_clock" - 0 Error(s), 0 Warning(s).
+Rebuild target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=45.0 xdata=0 code=1785
+creating hex file from "nixie_clock"...
+"nixie_clock" - 0 Error(s), 0 Warning(s).
+Rebuild target 'Target 1'
+compiling main.c...
+main.c(151): error C141: syntax error near 'else'
+main.c(175): error C233: 'renew_val': undefined label
+Target not created
+Rebuild target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=34.0 xdata=0 code=1505
+creating hex file from "nixie_clock"...
+"nixie_clock" - 0 Error(s), 0 Warning(s).
+Rebuild target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=34.0 xdata=0 code=1505
+creating hex file from "nixie_clock"...
+"nixie_clock" - 0 Error(s), 0 Warning(s).
+Rebuild target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=34.0 xdata=0 code=1505
+creating hex file from "nixie_clock"...
+"nixie_clock" - 0 Error(s), 0 Warning(s).
+Rebuild target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=34.0 xdata=0 code=1504
+creating hex file from "nixie_clock"...
+"nixie_clock" - 0 Error(s), 0 Warning(s).
+Rebuild target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=34.0 xdata=0 code=1510
+creating hex file from "nixie_clock"...
+"nixie_clock" - 0 Error(s), 0 Warning(s).
+Rebuild target 'Target 1'
+compiling main.c...
+main.c(191): error C141: syntax error near '}'
+main.c(197): error C141: syntax error near 'void'
+main.c(197): error C141: syntax error near '{'
+main.c(224): error C141: syntax error near 'void'
+main.c(224): error C141: syntax error near '{'
+main.c(251): error C141: syntax error near 'void'
+main.c(251): error C141: syntax error near '{'
+main.c(257): error C141: syntax error near 'void'
+Target not created
+Rebuild target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=44.0 xdata=0 code=1714
+creating hex file from "nixie_clock"...
+"nixie_clock" - 0 Error(s), 0 Warning(s).
+Rebuild target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=44.0 xdata=0 code=1723
+creating hex file from "nixie_clock"...
+"nixie_clock" - 0 Error(s), 0 Warning(s).
+Rebuild target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=44.0 xdata=0 code=1731
+creating hex file from "nixie_clock"...
+"nixie_clock" - 0 Error(s), 0 Warning(s).
+Rebuild target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=44.0 xdata=0 code=1732
+creating hex file from "nixie_clock"...
+"nixie_clock" - 0 Error(s), 0 Warning(s).
+Rebuild target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=44.0 xdata=0 code=1732
+creating hex file from "nixie_clock"...
+"nixie_clock" - 0 Error(s), 0 Warning(s).

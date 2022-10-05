@@ -1,0 +1,490 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        11/23/2014  02:37:49  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE main.obj TO QS18-12 RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  main.obj (MAIN)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?COPY)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?CLDPTR)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?CLDOPTR)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?CSTPTR)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_INIT)
+
+
+LINK MAP OF MODULE:  QS18-12 (MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0014H     UNIT         _DATA_GROUP_
+                    001CH     0004H                  *** GAP ***
+            BIT     0020H.0   0000H.2   UNIT         ?BI?MAIN
+                    0020H.2   0000H.6                *** GAP ***
+            DATA    0021H     000DH     UNIT         ?DT?MAIN
+            IDATA   002EH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     0008H                  *** GAP ***
+            CODE    000BH     0003H     ABSOLUTE     
+            CODE    000EH     01FFH     UNIT         ?PR?NIXIE_SETUP?MAIN
+            CODE    020DH     014EH     UNIT         ?C?LIB_CODE
+            CODE    035BH     00B8H     UNIT         ?PR?UPDATE_NIXIE_CLOCK?MAIN
+            CODE    0413H     008CH     UNIT         ?C_C51STARTUP
+            CODE    049FH     007BH     UNIT         ?PR?IR_TRANSMIT?MAIN
+            CODE    051AH     005DH     UNIT         ?PR?MAIN?MAIN
+            CODE    0577H     0049H     UNIT         ?PR?TIMER0_ISR?MAIN
+            CODE    05C0H     003DH     UNIT         ?PR?_DS1302_SETUP?MAIN
+            CODE    05FDH     002CH     UNIT         ?CO?MAIN
+            CODE    0629H     0024H     UNIT         ?PR?ROLL_NIXIE_FUN?MAIN
+            CODE    064DH     0020H     UNIT         ?PR?_DS1302_READ?MAIN
+            CODE    066DH     0019H     UNIT         ?PR?_DS1302_WR?MAIN
+            CODE    0686H     0017H     UNIT         ?C_INITSEG
+            CODE    069DH     0013H     UNIT         ?PR?_DS1302_WRITE?MAIN
+            CODE    06B0H     0012H     UNIT         ?PR?_DELAY?MAIN
+            CODE    06C2H     000AH     UNIT         ?PR?DS1302_INI?MAIN
+
+
+
+OVERLAY MAP OF MODULE:   QS18-12 (MAIN)
+
+
+BL51 BANKED LINKER/LOCATER V6.22                                                      11/23/2014  02:37:49  PAGE 2
+
+
+SEGMENT                               DATA_GROUP 
+  +--> CALLED SEGMENT               START    LENGTH
+---------------------------------------------------
+?C_C51STARTUP                       -----    -----
+  +--> ?PR?MAIN?MAIN
+  +--> ?C_INITSEG
+
+?PR?MAIN?MAIN                       -----    -----
+  +--> ?PR?DS1302_INI?MAIN
+  +--> ?PR?_DS1302_READ?MAIN
+  +--> ?PR?_DS1302_SETUP?MAIN
+  +--> ?PR?UPDATE_NIXIE_CLOCK?MAIN
+  +--> ?PR?ROLL_NIXIE_FUN?MAIN
+  +--> ?PR?IR_TRANSMIT?MAIN
+  +--> ?PR?NIXIE_SETUP?MAIN
+
+?PR?DS1302_INI?MAIN                 -----    -----
+  +--> ?PR?_DS1302_WRITE?MAIN
+
+?PR?_DS1302_WRITE?MAIN              001AH    0001H
+  +--> ?PR?_DS1302_WR?MAIN
+
+?PR?_DS1302_READ?MAIN               -----    -----
+  +--> ?PR?_DS1302_WR?MAIN
+
+?PR?_DS1302_SETUP?MAIN              0008H    0004H
+  +--> ?PR?_DS1302_WRITE?MAIN
+
+?PR?UPDATE_NIXIE_CLOCK?MAIN         0008H    0001H
+  +--> ?PR?_DS1302_READ?MAIN
+  +--> ?CO?MAIN
+
+?PR?ROLL_NIXIE_FUN?MAIN             -----    -----
+  +--> ?PR?_DELAY?MAIN
+
+?PR?IR_TRANSMIT?MAIN                001AH    0002H
+  +--> ?PR?_DELAY?MAIN
+
+?PR?NIXIE_SETUP?MAIN                0008H    0012H
+  +--> ?CO?MAIN
+  +--> ?PR?IR_TRANSMIT?MAIN
+  +--> ?PR?_DS1302_WRITE?MAIN
+
+
+
+SYMBOL TABLE OF MODULE:  QS18-12 (MAIN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  C:05FDH         PUBLIC        time_max_val
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+BL51 BANKED LINKER/LOCATER V6.22                                                      11/23/2014  02:37:49  PAGE 3
+
+
+  B:0020H.0       PUBLIC        update_flag
+  C:0577H         PUBLIC        timer0_isr
+  B:00A8H.7       PUBLIC        EA
+  B:00B0H.2       PUBLIC        cd4017_d0
+  D:0021H         PUBLIC        clock_data
+  C:0602H         PUBLIC        remote_data
+  B:0090H.1       PUBLIC        cd4017_h0
+  D:00A8H         PUBLIC        IE
+  B:0090H.2       PUBLIC        cd4017_h1
+  C:06B0H         PUBLIC        _delay
+  B:0090H.3       PUBLIC        cd4017_m0
+  B:0090H.4       PUBLIC        cd4017_m1
+  B:0090H.5       PUBLIC        cd4017_s0
+  D:00B8H         PUBLIC        IP
+  B:0090H.6       PUBLIC        cd4017_s1
+  C:064DH         PUBLIC        _ds1302_read
+  C:051AH         PUBLIC        main
+  C:06A1H         PUBLIC        _ds1302_write
+  C:0616H         PUBLIC        shift_week
+  B:00A0H.1       PUBLIC        ds1302_sdin
+  D:0028H         SYMBOL        timer_count
+  B:0080H.0       PUBLIC        hx1838_data
+  C:05C0H         PUBLIC        _ds1302_setup
+  D:0098H         PUBLIC        SCON
+  C:000EH         PUBLIC        nixie_setup
+  D:0089H         PUBLIC        TMOD
+  D:0088H         PUBLIC        TCON
+  B:0020H.1       PUBLIC        roll_nixie_flag
+  D:0029H         SYMBOL        nixie_roll
+  B:00B0H.3       PUBLIC        cd4017_dot
+  C:06C2H         PUBLIC        ds1302_ini
+  B:00A0H.0       PUBLIC        ds1302_sck
+  C:061DH         SYMBOL        _?ix1000
+  C:0623H         SYMBOL        _?ix1001
+  B:00A8H.1       PUBLIC        ET0
+  B:0088H.5       PUBLIC        TF0
+  D:008CH         PUBLIC        TH0
+  B:0090H.7       PUBLIC        cd4017_rst
+  D:008AH         PUBLIC        TL0
+  C:060CH         PUBLIC        shift_num
+  B:00A0H.2       PUBLIC        ds1302_cs
+  B:0088H.4       PUBLIC        TR0
+  C:0629H         PUBLIC        roll_nixie_fun
+  D:00C8H         PUBLIC        T2CON
+  C:066DH         PUBLIC        _ds1302_wr
+  C:0600H         PUBLIC        date_max_val
+  C:049FH         PUBLIC        IR_transmit
+  C:035BH         PUBLIC        update_nixie_clock
+  D:00D0H         PUBLIC        PSW
+  D:002AH         PUBLIC        IRCOM
+  -------         PROC          _DELAY
+  D:0007H         SYMBOL        x
+  -------         DO            
+  D:0006H         SYMBOL        i
+  -------         ENDDO         
+  C:06B0H         LINE#         59
+  C:06B0H         LINE#         62
+BL51 BANKED LINKER/LOCATER V6.22                                                      11/23/2014  02:37:49  PAGE 4
+
+
+  C:06C1H         LINE#         63
+  -------         ENDPROC       _DELAY
+  -------         PROC          TIMER0_ISR
+  C:0577H         LINE#         65
+  C:057BH         LINE#         67
+  C:057FH         LINE#         69
+  C:0581H         LINE#         71
+  C:0588H         LINE#         72
+  C:058BH         LINE#         73
+  C:058DH         LINE#         75
+  C:0594H         LINE#         76
+  C:0597H         LINE#         77
+  C:0599H         LINE#         78
+  C:059BH         LINE#         80
+  C:05A2H         LINE#         81
+  C:05A4H         LINE#         82
+  C:05A4H         LINE#         83
+  C:05A4H         LINE#         85
+  C:05ADH         LINE#         86
+  C:05B3H         LINE#         88
+  C:05B6H         LINE#         89
+  C:05B9H         LINE#         90
+  C:05BBH         LINE#         91
+  -------         ENDPROC       TIMER0_ISR
+  -------         PROC          MAIN
+  C:051AH         LINE#         93
+  C:051AH         LINE#         95
+  C:051CH         LINE#         96
+  C:0520H         LINE#         97
+  C:0526H         LINE#         99
+  C:0529H         LINE#         100
+  C:0533H         LINE#         101
+  C:053CH         LINE#         102
+  C:053CH         LINE#         104
+  C:053FH         LINE#         105
+  C:0541H         LINE#         106
+  C:0544H         LINE#         107
+  C:0547H         LINE#         108
+  C:0549H         LINE#         109
+  C:054BH         LINE#         111
+  C:054BH         LINE#         113
+  C:054EH         LINE#         114
+  C:0551H         LINE#         115
+  C:0553H         LINE#         116
+  C:0553H         LINE#         118
+  C:0556H         LINE#         119
+  C:0559H         LINE#         120
+  C:055CH         LINE#         121
+  C:055EH         LINE#         122
+  C:055EH         LINE#         124
+  C:0560H         LINE#         126
+  C:0563H         LINE#         127
+  C:0565H         LINE#         128
+  C:0568H         LINE#         130
+  C:056DH         LINE#         131
+  C:0570H         LINE#         132
+  C:0573H         LINE#         133
+BL51 BANKED LINKER/LOCATER V6.22                                                      11/23/2014  02:37:49  PAGE 5
+
+
+  C:0573H         LINE#         135
+  C:0575H         LINE#         136
+  C:0575H         LINE#         137
+  -------         ENDPROC       MAIN
+  -------         PROC          NIXIE_SETUP
+  -------         DO            
+  D:0008H         SYMBOL        time_temp
+  D:000EH         SYMBOL        date_temp
+  D:0014H         SYMBOL        week_date
+  D:0015H         SYMBOL        i
+  D:0016H         SYMBOL        update_pos
+  D:0001H         SYMBOL        ptr_temp
+  D:0017H         SYMBOL        ptr
+  C:005AH         SYMBOL        redo_label
+  C:0137H         SYMBOL        renew_val
+  -------         ENDDO         
+  C:000EH         LINE#         140
+  C:000EH         LINE#         142
+  C:0021H         LINE#         143
+  C:0034H         LINE#         144
+  C:0037H         LINE#         146
+  C:0039H         LINE#         149
+  C:0041H         LINE#         151
+  C:0043H         LINE#         153
+  C:0049H         LINE#         154
+  C:005AH         LINE#         156
+  C:005AH         LINE#         158
+  C:005AH         LINE#         160
+  C:0060H         LINE#         162
+  C:0066H         LINE#         164
+  C:0068H         LINE#         166
+  C:006FH         LINE#         167
+  C:0078H         LINE#         168
+  C:009AH         LINE#         169
+  C:00A3H         LINE#         170
+  C:00A5H         LINE#         171
+  C:00A5H         LINE#         172
+  C:00A9H         LINE#         191
+  C:00ACH         LINE#         192
+  C:00B3H         LINE#         193
+  C:00C0H         LINE#         194
+  C:00CDH         LINE#         195
+  C:00DAH         LINE#         198
+  C:00E1H         LINE#         200
+  C:00E1H         LINE#         201
+  C:00E1H         LINE#         202
+  C:00E1H         LINE#         204
+  C:00E6H         LINE#         205
+  C:00E8H         LINE#         206
+  C:00F2H         LINE#         207
+  C:00F4H         LINE#         208
+  C:00F4H         LINE#         210
+  C:00F9H         LINE#         211
+  C:0101H         LINE#         212
+  C:0103H         LINE#         213
+  C:0105H         LINE#         214
+  C:0105H         LINE#         216
+BL51 BANKED LINKER/LOCATER V6.22                                                      11/23/2014  02:37:49  PAGE 6
+
+
+  C:0112H         LINE#         217
+  C:011BH         LINE#         218
+  C:0126H         LINE#         219
+  C:0131H         LINE#         220
+  C:0133H         LINE#         221
+  C:0133H         LINE#         222
+  C:0137H         LINE#         224
+  C:0137H         LINE#         226
+  C:0137H         LINE#         228
+  C:013DH         LINE#         229
+  C:0145H         LINE#         231
+  C:014BH         LINE#         233
+  C:014EH         LINE#         234
+  C:0160H         LINE#         235
+  C:0167H         LINE#         236
+  C:0179H         LINE#         237
+  C:0180H         LINE#         238
+  C:0192H         LINE#         239
+  C:0199H         LINE#         240
+  C:01ABH         LINE#         241
+  C:01B2H         LINE#         242
+  C:01C4H         LINE#         243
+  C:01CBH         LINE#         244
+  C:01DDH         LINE#         246
+  C:01EEH         LINE#         248
+  C:01F4H         LINE#         249
+  C:01FCH         LINE#         250
+  C:0207H         LINE#         252
+  C:020AH         LINE#         253
+  -------         ENDPROC       NIXIE_SETUP
+  -------         PROC          IR_TRANSMIT
+  -------         DO            
+  D:0004H         SYMBOL        j
+  D:001AH         SYMBOL        k
+  D:001BH         SYMBOL        N
+  -------         ENDDO         
+  C:049FH         LINE#         256
+  C:049FH         LINE#         258
+  C:04A2H         LINE#         259
+  C:04A4H         LINE#         261
+  C:04A9H         LINE#         263
+  C:04ACH         LINE#         264
+  C:04B6H         LINE#         266
+  C:04B8H         LINE#         267
+  C:04BBH         LINE#         268
+  C:04C5H         LINE#         269
+  C:04CFH         LINE#         270
+  C:04E2H         LINE#         272
+  C:04EEH         LINE#         273
+  C:04FDH         LINE#         274
+  C:0500H         LINE#         275
+  C:0509H         LINE#         276
+  C:050FH         LINE#         278
+  C:0512H         LINE#         280
+  C:0519H         LINE#         281
+  -------         ENDPROC       IR_TRANSMIT
+  -------         PROC          ROLL_NIXIE_FUN
+BL51 BANKED LINKER/LOCATER V6.22                                                      11/23/2014  02:37:49  PAGE 7
+
+
+  -------         DO            
+  D:0004H         SYMBOL        i
+  -------         ENDDO         
+  C:0629H         LINE#         283
+  C:0629H         LINE#         287
+  C:062FH         LINE#         289
+  C:0631H         LINE#         290
+  C:0640H         LINE#         291
+  C:0643H         LINE#         292
+  C:0646H         LINE#         293
+  C:0648H         LINE#         294
+  C:064CH         LINE#         295
+  -------         ENDPROC       ROLL_NIXIE_FUN
+  -------         PROC          UPDATE_NIXIE_CLOCK
+  -------         DO            
+  D:0008H         SYMBOL        i
+  -------         ENDDO         
+  C:035BH         LINE#         297
+  C:035BH         LINE#         301
+  C:035EH         LINE#         302
+  C:0378H         LINE#         304
+  C:037EH         LINE#         306
+  C:0381H         LINE#         307
+  C:0395H         LINE#         308
+  C:03A8H         LINE#         309
+  C:03BCH         LINE#         310
+  C:03CFH         LINE#         311
+  C:03E3H         LINE#         312
+  C:03F6H         LINE#         313
+  C:0407H         LINE#         314
+  C:0412H         LINE#         315
+  -------         ENDPROC       UPDATE_NIXIE_CLOCK
+  -------         PROC          DS1302_INI
+  C:06C2H         LINE#         317
+  C:06C2H         LINE#         319
+  C:06C5H         LINE#         320
+  -------         ENDPROC       DS1302_INI
+  -------         PROC          _DS1302_SETUP
+  D:0008H         SYMBOL        clock_ptr
+  -------         DO            
+  D:000BH         SYMBOL        i
+  -------         ENDDO         
+  C:05C0H         LINE#         323
+  C:05C6H         LINE#         327
+  C:05C9H         LINE#         328
+  C:05D0H         LINE#         329
+  C:05D3H         LINE#         330
+  C:05EDH         LINE#         331
+  C:05F6H         LINE#         332
+  -------         ENDPROC       _DS1302_SETUP
+  C:069DH         SYMBOL        L?0115
+  -------         PROC          L?0114
+  -------         ENDPROC       L?0114
+  C:069DH         SYMBOL        L?0115
+  -------         PROC          _DS1302_WRITE
+  D:0007H         SYMBOL        cmd
+  D:001AH         SYMBOL        data_in
+BL51 BANKED LINKER/LOCATER V6.22                                                      11/23/2014  02:37:49  PAGE 8
+
+
+  C:06A1H         LINE#         335
+  C:06A3H         LINE#         337
+  C:06A5H         LINE#         338
+  C:06A8H         LINE#         339
+  C:06ADH         LINE#         340
+  C:06AFH         LINE#         341
+  -------         ENDPROC       _DS1302_WRITE
+  -------         PROC          _DS1302_WR
+  D:0007H         SYMBOL        cmd
+  -------         DO            
+  D:0006H         SYMBOL        i
+  D:0007H         SYMBOL        buff
+  -------         ENDDO         
+  C:066DH         LINE#         343
+  C:066DH         LINE#         346
+  C:066DH         LINE#         348
+  C:066FH         LINE#         349
+  C:0671H         LINE#         350
+  C:0677H         LINE#         351
+  C:067AH         LINE#         352
+  C:067DH         LINE#         353
+  C:0681H         LINE#         354
+  C:0685H         LINE#         355
+  -------         ENDPROC       _DS1302_WR
+  -------         PROC          _DS1302_READ
+  D:0007H         SYMBOL        cmd
+  -------         DO            
+  D:0007H         SYMBOL        i
+  D:0005H         SYMBOL        buff
+  -------         ENDDO         
+  C:064DH         LINE#         357
+  C:064DH         LINE#         361
+  C:064FH         LINE#         362
+  C:0652H         LINE#         364
+  C:0654H         LINE#         365
+  C:0658H         LINE#         366
+  C:065EH         LINE#         367
+  C:0661H         LINE#         368
+  C:0664H         LINE#         369
+  C:0668H         LINE#         371
+  C:066AH         LINE#         372
+  C:066CH         LINE#         373
+  -------         ENDPROC       _DS1302_READ
+  -------         ENDMOD        MAIN
+
+  -------         MODULE        ?C?COPY
+  C:02DDH         PUBLIC        ?C?COPY
+  -------         ENDMOD        ?C?COPY
+
+  -------         MODULE        ?C?CLDPTR
+  C:0303H         PUBLIC        ?C?CLDPTR
+  -------         ENDMOD        ?C?CLDPTR
+
+  -------         MODULE        ?C?CLDOPTR
+  C:031CH         PUBLIC        ?C?CLDOPTR
+  -------         ENDMOD        ?C?CLDOPTR
+
+BL51 BANKED LINKER/LOCATER V6.22                                                      11/23/2014  02:37:49  PAGE 9
+
+
+  -------         MODULE        ?C?CSTPTR
+  C:0349H         PUBLIC        ?C?CSTPTR
+  -------         ENDMOD        ?C?CSTPTR
+
+Program Size: data=42.2 xdata=0 code=1732
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

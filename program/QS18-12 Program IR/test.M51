@@ -1,0 +1,97 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        05/29/2014  00:15:33  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL\C51\C51\BIN\BL51.EXE Copy of main.obj TO test RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  Copy of main.obj (COPY_OF_MAIN)
+  C:\KEIL\C51\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  test (COPY_OF_MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0045H     UNIT         ?PR?MAIN?COPY_OF_MAIN
+            CODE    0048H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   test (COPY_OF_MAIN)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?COPY_OF_MAIN
+
+
+
+SYMBOL TABLE OF MODULE:  test (COPY_OF_MAIN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        COPY_OF_MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00B0H         PUBLIC        P3
+  B:00B0H.2       PUBLIC        cd4017_d0
+  B:0090H.1       PUBLIC        cd4017_h0
+  D:00A8H         PUBLIC        IE
+  B:0090H.2       PUBLIC        cd4017_h1
+  B:0090H.3       PUBLIC        cd4017_m0
+  B:0090H.4       PUBLIC        cd4017_m1
+  B:0090H.5       PUBLIC        cd4017_s0
+  D:00B8H         PUBLIC        IP
+  B:0090H.6       PUBLIC        cd4017_s1
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/29/2014  00:15:33  PAGE 2
+
+
+  C:0003H         PUBLIC        main
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  B:0090H.7       PUBLIC        cd4017_rst
+  D:00C8H         PUBLIC        T2CON
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          MAIN
+  -------         DO            
+  D:0007H         SYMBOL        i
+  D:0006H         SYMBOL        j
+  D:0005H         SYMBOL        k
+  -------         ENDDO         
+  C:0003H         LINE#         29
+  C:0003H         LINE#         33
+  C:0006H         LINE#         34
+  C:000AH         LINE#         36
+  C:000AH         LINE#         38
+  C:0010H         LINE#         39
+  C:0016H         LINE#         40
+  C:001CH         LINE#         41
+  C:0022H         LINE#         42
+  C:0028H         LINE#         43
+  C:002EH         LINE#         44
+  C:0034H         LINE#         46
+  C:0036H         LINE#         47
+  C:0038H         LINE#         48
+  C:003EH         LINE#         49
+  C:0042H         LINE#         50
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        COPY_OF_MAIN
+
+Program Size: data=9.0 xdata=0 code=84
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

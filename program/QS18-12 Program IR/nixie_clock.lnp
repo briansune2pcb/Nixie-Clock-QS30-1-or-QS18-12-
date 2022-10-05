@@ -1,0 +1,3 @@
+"main.obj" 
+TO "nixie_clock" REGFILE (.\nixie_clock.ORC) 
+RAMSIZE(256) 
